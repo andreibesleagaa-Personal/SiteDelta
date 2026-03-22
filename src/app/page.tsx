@@ -7,6 +7,7 @@ import { t, Lang } from "@/lib/translations";
 const DeltaMap = dynamic(() => import("@/components/DeltaMap"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 import Seasons from "@/components/Seasons";
+import DidYouKnow from "@/components/DidYouKnow";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('ro');
@@ -208,6 +209,24 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* STIATI CA */}
+      <section className="py-24 px-6 bg-green-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="text-5xl mb-4">🤯</div>
+            <h2 className="text-4xl font-bold text-green-900 mb-4">
+              {lang === 'ro' ? 'Știați că...' : 'Did you know...'}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {lang === 'ro'
+                ? 'Delta Dunării ascunde recorduri și povești pe care nimeni nu ți le spune'
+                : 'The Danube Delta hides records and stories nobody tells you about'}
+            </p>
+          </div>
+          <DidYouKnow lang={lang} />
         </div>
       </section>
 
