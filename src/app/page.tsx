@@ -8,6 +8,7 @@ const DeltaMap = dynamic(() => import("@/components/DeltaMap"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 import Seasons from "@/components/Seasons";
 import DidYouKnow from "@/components/DidYouKnow";
+import Quotes from "@/components/Quotes";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('ro');
@@ -209,6 +210,21 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CITATE */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-green-900 mb-4">
+              {lang === 'ro' ? 'Spiritul Deltei' : 'The Spirit of the Delta'}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {lang === 'ro' ? 'Gânduri din inima apelor' : 'Thoughts from the heart of the waters'}
+            </p>
+          </div>
+          <Quotes lang={lang} />
         </div>
       </section>
 
