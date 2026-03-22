@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { t, Lang } from "@/lib/translations";
+
+const DeltaMap = dynamic(() => import("@/components/DeltaMap"), { ssr: false });
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('ro');
@@ -194,6 +197,23 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* HARTA */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold text-green-900 mb-4">
+              {lang === 'ro' ? 'Traseul nostru' : 'Our route'}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {lang === 'ro'
+                ? 'De la Mahmudia sau Murghiol, pe Brațul Sfântul Gheorghe, până la capătul Deltei'
+                : 'From Mahmudia or Murghiol, along the St. George branch, to the end of the Delta'}
+            </p>
+          </div>
+          <DeltaMap />
         </div>
       </section>
 
