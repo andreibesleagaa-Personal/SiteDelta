@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { t, Lang } from "@/lib/translations";
 
 const DeltaMap = dynamic(() => import("@/components/DeltaMap"), { ssr: false });
+const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('ro');
@@ -46,7 +47,16 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-green-50 to-blue-50 pt-20">
-        <div className="absolute inset-0 bg-[url('/hero-delta.jpg')] bg-cover bg-center opacity-30"></div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        >
+          <source src="/media/video/turisti.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-50/60 via-transparent to-green-50/60"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <div className="inline-block bg-amber-100 text-amber-800 text-sm font-semibold px-4 py-2 rounded-full mb-6">
             {T.hero.badge}
@@ -197,6 +207,21 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* GALERIE */}
+      <section id="galerie" className="py-24 px-6 bg-amber-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-green-900 mb-4">
+              {lang === 'ro' ? 'Galerie' : 'Gallery'}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {lang === 'ro' ? 'Delta Dunării prin ochii noștri' : 'The Danube Delta through our eyes'}
+            </p>
+          </div>
+          <Gallery lang={lang} />
         </div>
       </section>
 
