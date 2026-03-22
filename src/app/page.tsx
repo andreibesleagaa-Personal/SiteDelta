@@ -41,10 +41,12 @@ export default function Home() {
               Vezi pachetele
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-gray-600">
+          <div className="mt-12 flex flex-wrap justify-center gap-6 text-gray-600 text-sm md:text-base">
             <div className="flex items-center gap-2"><span className="text-2xl">🚤</span><span>2 bărci · 10 locuri fiecare</span></div>
-            <div className="flex items-center gap-2"><span className="text-2xl">🐕</span><span>Prietenos cu animalele</span></div>
-            <div className="flex items-center gap-2"><span className="text-2xl">🍽️</span><span>Mâncare tradițională</span></div>
+            <div className="flex items-center gap-2"><span className="text-2xl">🧊</span><span>Frigider cu băuturi reci la bord</span></div>
+            <div className="flex items-center gap-2"><span className="text-2xl">☂️</span><span>Umbrar + prelată pentru ploaie</span></div>
+            <div className="flex items-center gap-2"><span className="text-2xl">🐕</span><span>Veste de salvare și pentru câini</span></div>
+            <div className="flex items-center gap-2"><span className="text-2xl">👶</span><span>Echipament pentru copii inclus</span></div>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-400">
@@ -129,6 +131,30 @@ export default function Home() {
               </a>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* DOTARI BARCA */}
+      <section className="py-16 px-6 bg-blue-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-green-900 mb-2">Barca noastră</h2>
+            <p className="text-gray-600">Echipată complet pentru siguranța și confortul tău</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+            {[
+              { icon: "🧊", label: "Frigider cu băuturi reci" },
+              { icon: "⛱️", label: "Umbrar pentru zilele călduroase" },
+              { icon: "🌧️", label: "Prelată în caz de ploaie" },
+              { icon: "🦺", label: "Veste de salvare pt copii și câini" },
+              { icon: "⚓", label: "Tot echipamentul de siguranță naval" },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <p className="text-sm text-gray-700 font-medium">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
