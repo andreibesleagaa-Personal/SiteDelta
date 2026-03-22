@@ -30,8 +30,8 @@ export default function Home() {
             <span className="text-amber-600">ca în povești</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            O zi pe apă cu ghizi locali, mâncare gătită cu suflet de Diana, 
-            și liniștea pe care orașul n-o poate oferi.
+            Canale greu accesibile, sate din inima Deltei, oameni și obiceiuri rare. 
+            Fără să ne uităm la ceas. O poveste, nu doar o plimbare.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#rezervare" className="bg-amber-600 text-white text-lg px-8 py-4 rounded-full font-bold hover:bg-amber-700 transition shadow-lg">
@@ -78,7 +78,7 @@ export default function Home() {
                 <li>✅ Veste de salvare pentru toți</li>
                 <li>✅ Pet-friendly</li>
               </ul>
-              <div className="text-3xl font-bold text-amber-600 mb-4">La cerere</div>
+              <div className="text-sm text-gray-500 italic mb-4">Preț sub media pieței · stabilit la telefon</div>
               <a href="#rezervare" className="block text-center bg-amber-600 text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition">
                 Rezervă
               </a>
@@ -99,10 +99,10 @@ export default function Home() {
                 <li>✅ Tot ce include pachetul de bază</li>
                 <li>✅ Masă tradițională la terasă</li>
                 <li>✅ Pește proaspăt din Delta</li>
-                <li>✅ Meniu personalizat la cerere</li>
-                <li>✅ Surprize gastronomice</li>
+                <li>✅ Meniu la precomandă sau surpriză</li>
+                <li>✅ Gătit de Diana, cu suflet</li>
               </ul>
-              <div className="text-3xl font-bold text-amber-600 mb-4">La cerere</div>
+              <div className="text-sm text-gray-500 italic mb-4">Preț sub media pieței · stabilit la telefon</div>
               <a href="#rezervare" className="block text-center bg-green-600 text-white py-3 rounded-full font-semibold hover:bg-green-700 transition">
                 Rezervă
               </a>
@@ -123,7 +123,7 @@ export default function Home() {
                 <li>✅ Sfântu Gheorghe — capătul drumului</li>
                 <li>✅ Liniște totală, natură pură</li>
               </ul>
-              <div className="text-3xl font-bold text-amber-600 mb-4">La cerere</div>
+              <div className="text-sm text-gray-500 italic mb-4">Preț sub media pieței · stabilit la telefon</div>
               <a href="#rezervare" className="block text-center bg-blue-600 text-white py-3 rounded-full font-semibold hover:bg-blue-700 transition">
                 Rezervă
               </a>
@@ -133,36 +133,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CITAT ROMEO */}
+      <section className="py-20 px-6 bg-green-900 text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="text-5xl mb-8">🦆</div>
+          <blockquote className="text-2xl md:text-3xl font-light leading-relaxed italic text-green-100 mb-8">
+            „Încerc să vă ofer o poveste din Delta Dunării,<br className="hidden md:block" />
+            <span className="text-amber-300 font-semibold"> nu doar o plimbare."</span>
+          </blockquote>
+          <p className="text-green-300 text-lg">— Romeo, ghid local în Delta Dunării</p>
+        </div>
+      </section>
+
       {/* DESPRE NOI */}
-      <section id="despre" className="py-24 px-6 bg-green-900 text-white">
+      <section id="despre" className="py-24 px-6 bg-green-800 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Cine suntem</h2>
-            <p className="text-xl text-green-200">Localnici cu suflet mare și Delta în sânge</p>
+            <h2 className="text-4xl font-bold mb-4">De ce noi?</h2>
+            <p className="text-xl text-green-200">Ieșim din tiparele excursiilor comerciale</p>
           </div>
+
+          {/* Romeo's philosophy */}
+          <div className="bg-green-700/50 rounded-2xl p-8 mb-12 max-w-3xl mx-auto border border-green-600">
+            <p className="text-green-100 text-lg leading-relaxed mb-4">
+              „Scopul este să vedem Delta Dunării altfel, fără să ne uităm mereu la ceas, 
+              să navigăm pe canale mai greu accesibile pentru ceilalți, să acostăm în satele 
+              din inima deltei, să întâlnim oameni și obiceiuri."
+            </p>
+            <p className="text-green-100 text-lg leading-relaxed">
+              „Prețul va fi în funcție de numărul de persoane (max. 10), va fi un preț minim — 
+              sub prețul folosit de ceilalți transportatori. Iar la sfârșit, dacă v-a plăcut, 
+              mă puteți onora cu ceva în plus — nu e obligatoriu."
+            </p>
+            <p className="text-amber-300 font-semibold mt-4">— Romeo</p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="text-7xl mb-4">🧭</div>
               <h3 className="text-2xl font-bold mb-3">Romeo</h3>
               <p className="text-green-200 leading-relaxed">
-                Localnic din Sfântu Gheorghe, ghid cu povești despre fiecare cot de apă. 
-                Construiește cu mâinile lui terasa cu stuf și știe Delta ca pe propriul buzunar.
+                Localnic, ghid cu povești despre fiecare cot de apă. 
+                Știe canalele greu accesibile, satele din inimă, și oamenii cu obiceiuri rare.
               </p>
             </div>
             <div className="text-center">
               <div className="text-7xl mb-4">🚣</div>
               <h3 className="text-2xl font-bold mb-3">Rareș</h3>
               <p className="text-green-200 leading-relaxed">
-                Co-pilot pe apă, cunoscător al traseelor secrete ale Deltei. 
-                Împreună cu Romeo duc până la 20 de turiști pe zi în inima Deltei.
+                Co-pilot pe apă, cunoscător al traseelor secrete. 
+                Împreună cu Romeo, duc grupuri de până la 10 persoane în inima Deltei.
               </p>
             </div>
             <div className="text-center">
               <div className="text-7xl mb-4">👩‍🍳</div>
               <h3 className="text-2xl font-bold mb-3">Diana</h3>
               <p className="text-green-200 leading-relaxed">
-                Soția lui Rareș, bucătăreasă cu talent. Gătește pește proaspăt din Delta 
-                și specialități unice — cu precomenzi sau surprize gastronomice.
+                Soția lui Rareș, bucătăreasă cu talent. Gătește pește proaspăt și 
+                specialități unice — cu precomenzi sau surprize gastronomice.
               </p>
             </div>
           </div>
