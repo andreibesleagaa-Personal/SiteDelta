@@ -6,6 +6,7 @@ import { t, Lang } from "@/lib/translations";
 
 const DeltaMap = dynamic(() => import("@/components/DeltaMap"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
+import Seasons from "@/components/Seasons";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('ro');
@@ -207,6 +208,23 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SEZOANE */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-green-900 mb-4">
+              {lang === 'ro' ? 'Când să vii în Delta?' : 'When to visit the Delta?'}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {lang === 'ro'
+                ? 'Fiecare sezon îți oferă o experiență diferită. Alege-o pe a ta.'
+                : 'Every season offers a different experience. Choose yours.'}
+            </p>
+          </div>
+          <Seasons lang={lang} />
         </div>
       </section>
 
