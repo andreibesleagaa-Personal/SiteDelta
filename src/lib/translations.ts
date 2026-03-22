@@ -50,7 +50,7 @@ export const t = {
     excursii: {
       title: 'Pachetele noastre',
       subtitle: 'Alege experiența care ți se potrivește',
-      pret: 'Preț sub media pieței · stabilit la telefon',
+      pret: 'Cele mai accesibile prețuri · stabilit la telefon',
       rezerva: 'Rezervă',
       pachete: [
         {
@@ -150,7 +150,7 @@ export const t = {
     excursii: {
       title: 'Our packages',
       subtitle: 'Choose the experience that suits you',
-      pret: 'Below market price · discussed by phone',
+      pret: 'Most affordable prices · discussed by phone',
       rezerva: 'Book',
       pachete: [
         {
